@@ -40,5 +40,26 @@ namespace HashScan.Lib
 
             return ans;
         }
+
+        public void WriteDataBase(string path, List<Virus> viruses)
+        {
+            try
+            {
+                using (StreamWriter sw = new StreamWriter(path))
+                {
+                    sw.WriteLine(viruses.Count);
+                    for(int i = 0; i<viruses.Count; i++)
+                    {
+                        Virus virus = viruses[i];
+                        sw.WriteLine(virus.Name + ":" + virus.HashValue);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error write database: ", e.Message);
+            }
+        }
     }
+
 }

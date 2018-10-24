@@ -55,6 +55,7 @@ namespace HashScan
             Console.WriteLine();
 
             // wait a key
+            Console.WriteLine("Scan Done");
             Console.ReadLine();
         }
     }

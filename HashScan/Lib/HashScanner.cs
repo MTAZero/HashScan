@@ -24,6 +24,11 @@ namespace HashScan.Lib
             SortList();
         }
 
+        public List<Virus> GetLists()
+        {
+            return viruses;
+        }
+
         private void SortList()
         {
             viruses = viruses.OrderBy(p => p.HashValue).ToList();

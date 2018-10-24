@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="db\md5.txt" />
+    <Content Include="db\md5Save.txt" />
     <Content Include="db\sha1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
